@@ -1,0 +1,43 @@
+<div class="modal fade" id="modal_login" tabindex="-1" role="dialog" aria-labelledby="modal_login" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="flex-direction: column;">
+        <div style="display:flex; justify-content: flex-end; width: 100%;">
+        <button id="xButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span id="x_login" aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div style="display: flex; justify-content:center; width:100%; margin-top:4%;">
+          <div style="display: flex; justify-content: space-between; width:80%;">
+            <h3>LOGIN</h3>
+            <a href="../my-account">
+              <div id="box">
+                <div id="inner_box">
+                  <span>Create a new account</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body" style="padding: 3rem;">
+        <form method="POST" action="/login">
+         <div class="form-group">
+          <label for="loginInputEmail">Email address</label>
+          <input type="email" name="loginEmail" class="form-control" id="loginInputEmail" aria-describedby="emailHelp" placeholder="Enter email address">
+         </div>
+         <div class="form-group">
+          <label for="loginInputPassword">Password</label>
+          <input type="password" name="loginPassword" class="form-control" id="loginInputPassword" placeholder="Password">
+         </div>
+         <div class="form-check" style="margin-bottom: 8%;">
+          <input type="checkbox" class="form-check-input" id="loginCheck">
+          <label class="form-check-label" for="loginCheck">Remember Me</label>
+          <span style="margin-left:15%;"><a href="#" style="margin-right:0;">FORGOT YOUR PASSWORD ?</a></span>
+         </div>
+         <button type="submit" class="btn btn-outline-primary btn-lg btn-block">LOGIN</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

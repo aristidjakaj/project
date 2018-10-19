@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Account</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/modal_login.css" />
+    <link rel="stylesheet" href="../assets/css/my-account.css" />
+    <link rel="stylesheet" href="../assets/css/alert.css" />
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+    <% include partials/vertical_nav.ejs %>
+    <% include partials/modal_login.ejs %>
+    <div class="container">
+      <div id="header">
+        <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/" style="color: #f8f9fa;">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" style="color: #f8f9fa;">My Account</li>
+         </ol>
+        </nav>
+        <h1 style="color: #f8f9fa;">MY ACCOUNT</h1>
+      </div>
+      <div class="emptySpace">
+      </div>
+      <div id="wrap_my-account">
+        <% if (success) { %>
+          <div class="card" style="width: 18rem;">
+            <div style="display: flex; align-items: center; justify-content: center; padding: 0.5rem">
+              <i class="far fa-user-circle" style="font-size: 8rem"></i>
+            </div>
+          <div class="card-body" style="display: flex; align-items: center; justify-content: center">
+            <h3 class="card-title">Welcome <%= name %></h3>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#">Orders</a></li>
+            <li class="list-group-item"><a href="#">Account Details</a></li>
+            <li class="list-group-item"><a href="/logout">Logout</a></li>
+          </ul>
+        </div>
+        <% } else { %>
+          <h2 style="margin-bottom: 3rem;">REGISTER</h2>
+          <form method="POST" action="/my-account">
+             <div class="form-group">
+              <label for="registerUsername">Username</label>
+               <% if(errors) { %>
+                 <% counter=false %>
+                 <% errors.forEach(function (err){ %>
+                  <% if(err.param==='username'){ %>
+                   <input type="text" name="username" class="form-control is-invalid" id="registerUsername" aria-describedby="emailHelp" placeholder="Enter Username" required>
+                   <div class="invalid-feedback">
+                     <%= err.msg %>
+                   </div>
+                   <% counter=true %>
+                  <% } %>
+                 <% }) %>
+                 <% if(counter===false){ %>
+                   <input type="text" name="username" class="form-control" id="registerUsername" aria-describedby="emailHelp" placeholder="Enter Username" required>
+                 <% } %>
+                <%  } else { %>
+                 <input type="text" name="username" class="form-control" id="registerUsername" aria-describedby="emailHelp" placeholder="Enter Username" required>
+                <% } %>
+            </div>
+            <div class="form-group">
+             <label for="registerEmail">Email Address</label>
+             <% if(errors){ %>
+               <% counter=false %>
+               <% errors.forEach(function(err){ %>
+                 <% if(err.param==='email'){ %>
+                  <input type="email" name="email" class="form-control is-invalid" id="registerEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" required>
+                  <div class="invalid-feedback">
+                   <%= err.msg %>
+                  </div>
+                  <% counter=true %>
+                <% } %>
+               <% }) %>
+               <% if(counter===false){ %>
+                 <input type="email" name="email" class="form-control" id="registerEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" required>
+               <% } %>
+             <% } else { %>
+              <input type="email" name="email" class="form-control" id="registerEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" required>
+             <% } %>
+            </div>
+            <div class="form-group">
+             <label for="registerPassword">Password</label>
+             <% if (errors){ %>
+               <% counter=false %>
+               <% errors.forEach(function(err){ %>
+                 <% if(err.param==='password'){ %>
+                  <input type="password" name="password" class="form-control is-invalid" id="registerPassword" placeholder="Password" required>
+                  <div class="invalid-feedback">
+                   <%= err.msg %>
+                  </div>
+                  <% counter=true %>
+                 <% } %>
+               <% }) %>
+               <% if(counter===false){ %>
+                 <input type="password" name="password" class="form-control" id="registerPassword" placeholder="Password" required>
+                 <small id="passwordHelpBlock" class="form-text text-muted">Your password must be minimum 6 characters long.
+                 </small>
+               <% } %>
+             <% } else{ %>
+              <input type="password" name="password" class="form-control" id="registerPassword" placeholder="Password" required>
+              <small id="passwordHelpBlock" class="form-text text-muted">Your password must be minimum 6 characters long.
+              </small>
+             <% } %>
+           </div>
+           <div class="form-group" style="margin-bottom: 8%;">
+            <label for="registerConfirmPassword">Confirm Password</label>
+            <input type="password" name="confirmPassword" class="form-control" id="registerConfirmPassword" placeholder=" Confirm Password" required>
+           </div>
+           <button type="submit" class="btn btn-outline-primary btn-lg btn-block">REGISTER</button>
+          </form>
+        <% } %>
+      </div>
+      <% if (logErrors){ %>
+        <% include partials/alert.ejs %>
+      <% } %>
+    </div>
+    <script src="../assets/ecmascript/alert.js"></script>
+    <script src="../assets/ecmascript/modal_login.js"></script>
+    <script src="../assets/ecmascript/search-bar.js"></script>
+  </body>
+</html>

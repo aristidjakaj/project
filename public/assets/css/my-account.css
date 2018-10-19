@@ -1,0 +1,27 @@
+#header{
+  width: 100%;
+  height: 420px;
+  background-image: url('../images/Young beautiful woman wearing earings haute couture.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.breadcrumb{
+  background: transparent;
+}
+
+.breadcrumb-item+.breadcrumb-item::before{
+  color: #f8f9fa;
+}
+
+#wrap_my-account{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20rem;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}

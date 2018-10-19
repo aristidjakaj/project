@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8"/>
+  <title>Blue Diamond</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/modal_login.css" />
+  <link rel="stylesheet" href="../assets/css/alert.css" />
+</head>
+<body>
+  <% include partials/nav.ejs %>
+  <% include partials/vertical_nav.ejs %>
+  <% include partials/modal_login.ejs %>
+  <div class="container home-view">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active first">
+          <img class="d-block w-100" src="../assets/images/Portrait of a nice looking woman with beautiful earings.jpg" alt="First slide" height="100%" width="100%">
+        </div>
+        <div class="carousel-item second">
+          <img class="d-block w-100" src="../assets/images/Elegant girl advertising jewelry.jpg" alt="Second slide" height="100%" width="100%">
+        </div>
+        <div class="carousel-item third">
+          <img class="d-block w-100" src="../assets/images/Beautiful woman wearing cocktail dress.jpg" alt="Third slide" height="100%" width="100%">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div id="imagebox_1">
+      <div id="frame_1">
+        <img class="image_effect" src="../assets/images/Studioshot of young beautiful woman.jpg" alt="Studioshot of young beautiful woman" height="100%" width="100%"/>
+      </div>
+    </div>
+    <div id="about_us">
+      <div id="about_us_header">
+        <h1>About Us</h1>
+      </div>
+      <div id="about_us_content">
+        <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices tortor lorem, in faucibus tortor lacinia posuere. Aenean sit amet tortor scelerisque, accumsan dolor eu, varius ligula. Sed pellentesque erat non sodales luctus. Nam sit amet imperdiet nisl. Nullam vitae mi massa. Nulla ultricies mauris vel leo tempor, vulputate sodales sapien molestie. Etiam iaculis laoreet libero id egestas. Vivamus faucibus augue at felis dignissim sollicitudin. Vestibulum nunc ligula, placerat lobortis commodo id, consectetur eu lacus. Fusce eu aliquet orci, ac dapibus velit. Donec venenatis non orci nec vestibulum.
+        </p>
+      </div>
+      </div>
+      <div id="row_3_col_1">
+        <div id="discount_1">
+          <h2>Up to 20% off on <br />diamond jewelry</h2>
+          <a href="#" class="btn btn-outline-dark" style="margin-top: 5%;">SHOP NOW</a>
+        </div>
+        <div id="discount_1_image">
+          <img class="image_effect" src="../assets/images/Young woman holding engagement ring.jpg" alt="Young woman holding engagement ring" height="80%" width="100%" />
+        </div>
+      </div>
+      <div id="row_3_col_2">
+        <div style="overflow: hidden; height: 386.5px;">
+          <img class="image_effect" src="../assets/images/red stone.jpg" alt="video" width="100%" style="height: 386.5px;"/>
+          <div id="play_frame">
+            <button type="button" id="modalButton" data-toggle="modal" data-target="#exampleModalCenter">
+            <i class="far fa-play-circle"></i>
+            </button>
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span id="x_video" aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <video width="470" height="390" controls>
+                  <source src="../assets/video/redGem.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="modal-footer">
+                  <button id="close_video" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+    <div id="row_4">
+      <ul class="list-inline">
+       <li class="list-inline-item"><a href="#"><img src="../assets/images/bracelet.jpg" alt="bracelet" width="100%" height="100%"/><span>Bracelet</span></a></li>
+       <li class="list-inline-item"><a href="#"><img src="../assets/images/earring.jpg" alt="earrings" width="100%" height="100%"/><span>Earrings</span></a></li>
+       <li class="list-inline-item"><a href="#"><img src="../assets/images/marriage ring.jpg" alt="marriage ring" width="100%" height="100%"/><span style="left: 6%;">Marriage Rings</span></a></li>
+       <li class="list-inline-item"><a href="#"><img src="../assets/images/necklace.jpg" alt="necklace" width="100%" height="100%"/><span>Necklace</span></a></li>
+       <li class="list-inline-item"><a href="#"><img src="../assets/images/ring.jpg" alt="ring" width="100%" height="100%"/><span>Rings</span></a></li>
+      </ul>
+    </div>
+    <h1 style="margin-left:8%; margin-top:8%;">Featured Products</h1>
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist" style="margin-top:6%; margin-left:8%;">
+    <li class="nav-item">
+      <a class="nav-link active" id="newArrival-tab" data-toggle="tab" href="#home" role="tab" aria-controls="newArrival" aria-selected="true">New Arrival</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="bestSellers-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="bestSellers" aria-selected="false">Best Sellers</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="mostWanted-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="mostWanted" aria-selected="false">Most Wanted</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent" style="margin-left:8%; text-align:center;">
+    <div class="tab-pane fade show active" id="newArrival" role="tabpanel" aria-labelledby="newArrival-tab">
+      <ul class="list-inline">
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+      </ul>
+    </div>
+    <div class="tab-pane fade" id="bestSellers" role="tabpanel" aria-labelledby="bestSellers-tab">
+      <ul class="list-inline">
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+      </ul>
+    </div>
+    <div class="tab-pane fade" id="mostWanted" role="tabpanel" aria-labelledby="mostWanted-tab">
+      <ul class="list-inline">
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+       <li class="list-inline-item"></li>
+      </ul>
+    </div>
+    <a href="#" id="all_products" class="btn btn-light" style="margin-top:1%;"><i class="fas fa-long-arrow-alt-right" style="margin-right:5px;"></i>View All Products</a>
+  </div>
+  <div id="row_6">
+    <div class="card frame_6" style="width: 18rem; display:inline-block; width:45%">
+      <img class="card-img-top" src="../assets/images/jewelry box.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam sapien, elementum faucibus nisl sed, fringilla molestie eros. Sed a.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam sapien, elementum faucibus nisl sed, fringilla molestie eros. Sed a.</p>
+      </div>
+    </div>
+    <div class="card frame_6" style="width: 18rem; display:inline-block; vertical-align:top; width:45%; margin-left:2%;">
+      <img class="card-img-top" src="../assets/images/gold ring in hand.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><h3>Discount 20% on</h3><h5>all golden rings</h5></p>
+        <a href="#" class="btn btn-outline-dark">SHOP NOW</a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <div id="row_7">
+      <h2>Our Gallery</h2>
+      <small class="text-muted">For Spring/Summer 2015, the Edwin Womenswear Capsule
+Collection concentrates on every day, ecasions.</small>
+    </div>
+    <div id="row_8">
+      <ul class="list-inline">
+       <li class="list-inline-item"><a href="#"></a></li>
+       <li class="list-inline-item"><a href="#"></a></li>
+       <li class="list-inline-item"><a href="#"></a></li>
+       <li class="list-inline-item"><a href="#"></a></li>
+      </ul>
+    </div>
+    <button type="button" class="btn btn-outline-dark">LOAD MORE</button>
+  </div>
+  <div id="row_9">
+    <div class="row_9_subordinate" style="background-color: #eed3b6;">
+      <div class="wrap">
+        <div>
+          <i class="fas fa-phone"></i>
+        </div>
+        <div>
+          <span>Contact Us</span>
+        </div>
+        <div class="text_box" style="background-color: #558C89;">
+          <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida dolor quis placerat pulvinar. Integer augue diam, sollicitudin eu turpis at, efficitur mollis dui.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row_9_subordinate" style="background-color: #3e3e3e;">
+      <div class="wrap">
+        <div>
+          <i class="far fa-gem"></i>
+        </div>
+        <div>
+          <span>We Are Blue Diamond</span>
+        </div>
+        <div class="text_box" style="background-color: #DFE2DB; color:#343a40;">
+          <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue diam, tristique nec venenatis vel, luctus a urna. Curabitur efficitur.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row_9_subordinate" style="background-color: #bbceba;">
+      <div class="wrap">
+        <div>
+          <i class="fas fa-camera-retro"></i>
+        </div>
+        <div>
+          <span>Follow Us</span>
+        </div>
+        <div class="text_box" style="background-color: #FFFFFF; color:#343a40;">
+          <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula sapien eget rutrum mollis. Praesent efficitur mauris sit amet ante.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row_9_subordinate" style="background-color: #d1d1d1;">
+      <div class="wrap">
+        <div>
+          <i class="far fa-envelope"></i>
+        </div>
+        <div>
+          <span>Subscribe Us</span>
+        </div>
+        <div class="text_box" style="background-color:#C63D0F;">
+          <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tortor sit amet sapien ullamcorper aliquam. Etiam ornare luctus ligula.</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="emptySpace">
+  </div>
+  <% if (logErrors){ %>
+    <% include partials/alert.ejs %>
+  <% } %>
+  </div>
+  <script src="../assets/ecmascript/alert.js"></script>
+  <script src="../assets/ecmascript/modal_login.js"></script>
+  <script src="../assets/ecmascript/nav.js"></script>
+  <script src="../assets/ecmascript/modal_video.js"></script>
+  <script src="../assets/ecmascript/carousel.js"></script>
+  <script src="../assets/ecmascript/search-bar.js"></script>
+</body>
+</html>
