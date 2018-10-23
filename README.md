@@ -1,2 +1,3 @@
 # project
-Projekti ka te beje me nje platforme e-commerce ne te cilin perdoruesi blen bizhuteri nga argjendaria jone
+Projekti ka te beje me nje platforme e-commerce ne te cilin perdoruesi blen bizhuteri nga argjendaria jone.
+per aktivizimin e kodit - nodemon index.js
